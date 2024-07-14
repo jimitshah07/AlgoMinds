@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Bubble_sort_website">
+        <title>Bubble Sort</title>
+        <link href="bubble_sort_webpage_css.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+    </head>
+    <body>
+        <header class="main_header">
+            <h1 class="website_typewriter"><span id="typewriter"></span><span id="cursor"> |</span></h1>
+        </header>
+        <script>
+            function sleep(ms) {
+                return new Promise((resolve) => setTimeout(resolve, ms));
+            }
+
+            const phrases = [
+                "Welcome To Algo Web",
+                "Here You can learn any algo",
+                "Learn Algorithm with Best Technique Available"
+            ];
+            const el = document.getElementById("typewriter");
+
+            let sleepTime = 100;
+            let curPhrasesIndex = 0;
+
+            const writeloop = async () => {
+                while (true) {
+                    let curWord = phrases[curPhrasesIndex];
+                    for (let i = 0; i < curWord.length; i++) {
+                        el.innerText = curWord.substring(0, i + 1);
+                        await sleep(sleepTime);
+                    }
+                    await sleep(sleepTime * 10);
+                    for (let i = curWord.length; i > 0; i--) {
+                        el.innerText = curWord.substring(0, i - 1);
+                        await sleep(sleepTime);
+                    }
+                    await sleep(sleepTime * 5);
+
+                    if (curPhrasesIndex === phrases.length - 1) {
+                        curPhrasesIndex = 0;
+                    } else {
+                        curPhrasesIndex++;
+                    }
+                }
+            };
+
+            writeloop();  // Call the writeloop function
+        </script>
+
+       <!-- <header class="header2">
+            <div class="image">
+                <img src="E:\Project\img\15.jpeg" class="image1" alt="Bubble">
+            </div> 
+           
+        </header> -->
+		 <h1 class="heading">Bubble Sort</h1>
+        <section>
+            <div class="Pre-requisites">
+                <h2 class="heading2" style="color:black" ><b><u>Pre-requisites</u></b></h2>
+                <p class="text1"><b>Meaning:something that is necessary for something else to happen or exist.</b>
+                    <br>Pre-Requisites for learning any basic algorithm:
+                    <ul>
+                        <li>High School Mathematics</li>
+                        <li>Basic Knowledge of linear algebra, calculus, and logic</li>
+                    </ul>
+                    <br>
+                    <p class="text2"><b>The Major Pre-requisites for learning bubble sort: </b></p>
+                    <ul>
+                        <li>The notion of sorting</li>
+                        <li>Notion and concept of time and space Complexity</li>
+                        <li>and always Your Own Curiosity towards the concept and learning</li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="link">
+                <h2 class="heading5">Click on the links for the algorithm and application of Bubble Sort</h2>
+                <h3>Algorithm for Bubble Sort</h3>
+                <ul>
+                    <li><u><a href="E:\Project\algorithbubble.html">Algorithm</a></u></li>
+                </ul>
+				<h3>Animation For the Bubble Sort</h3>
+				<ul>
+					<li><u><a href="E:\Project\animation_html.html"> Animation </a></u></li>
+				</ul>
+                <h3>Application and real-life scenario of Bubble Sort</h3>
+                <ul>
+                    <li><u><a href="E:\Project\applications_bubble_sort.html">Applications and real-life scenario</a></u></li>
+                </ul>
+				<h3>Usage And Advantages of the bubble sort in different fields</h3>
+                <ul>
+                    <li><u><a href="usage_bubble_sort.html">Usage of Bubble sort</a></u></li>
+                </ul>
+                <h3>Sorting Information</h3>
+                <ul>
+                    <li><u><a href="E:\Project\bubblenew.html">Sorting Info</a></u></li>
+                </ul>
+            </div>
+        </section>
+        
+      <!--<footer>
+            <div class="vl"></div>
+            <h3 class="dev">Website and project developed by</h3>
+            <ul class="ul2">
+                <li><a href="https://www.instagram.com/shah_jimit22/">Jimt Shah</a></li>
+                <li><a href="https://www.instagram.com/dishuu.exe/">Dishant Dyavarchetti</a></li>
+                <li><a href="https://www.instagram.com/s_dhruvi0309/">Dhruvi Shah</a></li>
+                <li><a href="https://www.instagram.com/ft.moxitttt/">Moxit Shah</a></li>
+                <li><a href="https://www.instagram.com/nannssdraftsss.03/">Nancy Gandhi</a></li>
+                <li><a href="https://www.instagram.com/bhavya3151/">Bhavya Jani</a></li>
+                <li><a href="https://www.instagram.com/vatsal_k_/">Vatsal Kadia</a></li>
+                <li><a href="https://www.instagram.com/divy_2612/">Divy Vaghela</a></li>
+                <li><a href="https://www.instagram.com/preksha__shah.08/">Preksha Shah</a></li>
+            </ul>
+            <div class="contact">
+                <h3 class="heading6">Contact us Through</h3>
+                <p>Let's Connect!</p>
+                <a href="https://www.linkedin.com/in/dishant-dyavarchetti-8a269729a/" class="linkedin"><img src="C:\Users\Dishant\Downloads\Linkedin_logo.webp"></a>
+                <a href="https://github.com/Dishant-dyavarchetti" class="Github"><img src="C:\Users\Dishant\Downloads\pngwing.com.webp" class="Github_image"></a>
+            </div>
+        </footer> -->
+        <hr>
+        <footer class="footer2">
+            <p>&copy; AlgoMinds 2024</p>
+        </footer> 
+    </body>
+</html>
